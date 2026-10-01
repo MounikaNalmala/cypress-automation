@@ -1,0 +1,19 @@
+{
+  "name": "cypress-saucedemo-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cypress TypeScript automation framework for SauceDemo with Sauce Labs-ready configuration",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome",
+    "test:smoke": "cypress run --env grepTags=smoke",
+    "sauce": "saucectl run"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "cypress": "^13.17.0",
+    "typescript": "^5.7.2"
+  }
+}
