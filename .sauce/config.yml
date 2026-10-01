@@ -1,0 +1,24 @@
+apiVersion: v1alpha
+kind: cypress
+sauce:
+  region: us-west-1
+  concurrency: 2
+cypress:
+  version: 13.17.0
+rootDir: ../
+npm:
+  packages:
+    typescript: 5.7.2
+suites:
+  - name: SauceDemo - Chrome
+    browser: chrome
+    platformName: Windows 11
+    config:
+      specPattern:
+        - cypress/e2e/**/*.cy.ts
+artifacts:
+  download:
+    when: always
+    match:
+      - "**/*"
+    directory: ./sauce-artifacts/
